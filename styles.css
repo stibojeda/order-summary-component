@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Red Hat Display', sans-serif;
+  /* background-image: url('images/designs/desktop-design.jpg'); */
+  /* background-image: url('images/pattern-background-desktop.svg'); */
+  background-color: hsl(225, 100%, 94%);
+  
+}
+
+#backgroundPattern {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: -100;
+}
+
+#backgroundPatternMobile {
+  display: none;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: -100;
+}
+
+.boxOrderSummary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 33vw;
+  height: 95vh;
+  min-width: 450px;
+  min-height: 600px;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.boxOrderSummary img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.boxOrderSummary h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+  text-align: center;
+}
+
+.boxOrderSummary p {
+  margin: 0 3rem;
+  font-weight: 500;
+  text-align: center;
+  color: hsl(224, 23%, 55%);
+}
+
+.boxOrderSummary .costChange {
+  display: grid;
+  grid-template-columns: auto 2fr 1fr;
+  grid-template-rows: auto auto;
+  width: 80%;
+  margin: 0 3rem;
+  padding: 1rem;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 0.5rem;
+}
+
+.boxOrderSummary .costChange img {
+  grid-area: 1 / 1 / 3 / 2 ;
+  width: auto;
+}
+
+.boxOrderSummary .costChange h3 {
+  grid-area: 1 / 2 / 2 / 3 ;
+  width: 100%;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.boxOrderSummary .costChange p {
+  grid-area: 2 / 2 / 3 / 3 ;
+  margin: 0 1rem;
+  width: 100%;
+  text-align: left;
+
+}
+
+.boxOrderSummary .costChange a {
+  grid-area: 1 / 3 / 3 / 4 ;
+  margin: auto 0;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color:hsl(245, 75%, 52%);
+}
+
+.goToPayment {
+  width: 80%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  border-style: none;
+  border-radius: 0.5rem;
+  background-color: hsl(245, 75%, 52%);
+  box-shadow: 0 1rem 15px 3px rgba(56, 41, 224, 0.2);
+}
+
+.boxOrderSummary .cancelOrder {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  column-gap: 0.5rem;
+}
+
+.boxOrderSummary .cancelOrder .lastButton {
+  margin: 1rem 0 2rem 0;
+  font-size: 1rem;
+  font-weight: 900;
+  color: hsl(224, 23%, 55%);
+  border-style: none;
+  background-color: #ffffff00;
+}
+
+.goToPayment:hover,
+.lastButton:hover
+ {
+  cursor: pointer;
+}
+
+@media(max-width: 700px) {
+  #backgroundPattern {
+    display: none;
+  }
+
+  #backgroundPatternMobile {
+    display: block;
+  }
+}
+
+@media(min-width: 1920px) {
+  * {
+    font-size: 1.17vw;
+  }
+
+  .boxOrderSummary .costChange img {
+    grid-area: 1 / 1 / 3 / 2 ;
+    width: 3rem;
+  }
+
+}
